@@ -1,0 +1,88 @@
+body {
+    background-color: #003300;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.scoreboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 1200px;
+    background-color: #006600;
+}
+
+.time {
+    font-size: 10vw;
+    color: yellow;
+    margin-bottom: 2vh;
+}
+
+.teams {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 1vh 0;
+}
+
+.team {
+    font-size: 4vw;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #003300;
+    padding: 10px;
+    border-radius: 5px;
+    width: 45%;
+}
+
+.team-locaux {
+    text-align: left;
+}
+
+.team-visiteurs {
+    text-align: right;
+}
+
+.score {
+    font-size: 15vw;
+    margin: 1vh 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: yellow;
+}
+
+.score-locaux {
+    text-align: left;
+}
+
+.score-visiteurs {
+    text-align: right;
+}
+
+.period {
+    font-size: 4vw;
+    margin-top: 2vh;
+    color: yellow;
+}
+
+.score-update {
+    animation: scoreUpdate 1s ease-in-out;
+}
+
+@keyframes scoreUpdate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}

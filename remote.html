@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Télécommande Arbitre</title>
+    <link rel="stylesheet" href="remote_styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Télécommande Arbitre</h1>
+        <div class="controls">
+            <div class="team-controls">
+                <h2>Équipe Locale</h2>
+                <button onclick="incrementScore('home')">+</button>
+                <button onclick="decrementScore('home')">-</button>
+            </div>
+            <div class="team-controls">
+                <h2>Équipe Visiteurs</h2>
+                <button onclick="incrementScore('away')">+</button>
+                <button onclick="decrementScore('away')">-</button>
+            </div>
+        </div>
+        <div class="time-controls">
+            <h2>Temps</h2>
+            <button onclick="startStopTime()" id="timerButton">Démarrer</button>
+            <button onclick="resetTime()">Réinitialiser</button>
+            <input type="number" id="periodDuration" placeholder="Durée (min)" min="1" max="90">
+            <button onclick="setPeriodDuration()">Définir Durée</button>
+        </div>
+        <div class="period-controls">
+            <h2>Période</h2>
+            <button onclick="nextPeriod()">Période Suivante</button>
+            <button onclick="previousPeriod()">Période Précédente</button>
+        </div>
+    </div>
+    <script src="remote_script.js"></script>
+</body>
+</html>
